@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Quản lý sinh viên</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/style.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+   
+</head>
+<body onload="renderListStudent()">
+    <div class="form-student">
+        <h3> Form</h3>
+        <label for="">Họ và tên</label>
+        <input type="text" id="fullname"/>
+        <span id="fullname-error" class="error"></span>
+        <br/>
+        
+        <label for="">Email</label>
+        <input type="text" id="email"/>
+        <span id="email-error" class="error"></span>
+        <br/>
+        
+        <label for="">Số điện thoại</label>
+        <input type="text" id="phone"/>
+        <span id="phone-error" class="error"></span>
+        <br/>
+        
+        <label for="">Giới tính</label>
+        <div>
+            <input type="radio" name="gender" id="male" value="1"/> Nam
+            <input type="radio" name="gender" id="female" value="2"/> Nữ
+        </div>
+            <span id="gender-error" class="error"></span>
+        <br/>
+        
+        <label for="">&nbsp;</label>
+        <button onclick="save()">Lưu</button>
+        <br/>
+    </div>
+
+    <div class="list-student">
+        <h3>Danh sách sinh viên</h3>
+        <table id="grid-students"  width="600" cellpadding="0" cellpadding="0">
+            
+        </table>
+
+    </div>
+    <script src="./js/studen.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+</body>
+</html>
